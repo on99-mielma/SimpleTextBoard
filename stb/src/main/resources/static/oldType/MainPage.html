@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../oldType/assets/css/bootstrap.min.css">
+    <title>MainPage</title>
+</head>
+<body>
+<div id="MainPage" class="bg-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <div class="row">
+                    <p>^^</p>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="container-fluid">
+                        <div class="row justify-content-start text-center" v-for="text in this.textboarddata.data">
+                            <div class="col-12 border border-1 border-dark text-start">
+                                <div class="row border border-2 border-danger">
+                                    <p class="fw-bolder fs-1">{{text.text}}</p>
+                                </div>
+                            </div>
+                            <div class="container border border-3 border-primary">
+                                <div class="row justify-content-between">
+                                    <div class="col-4 border border-4 border-warning">
+                                        <div class="row">
+                                            <p>{{text.date}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 border border-4 border-warning">
+                                        <div class="row">
+                                            <p>{{text.author}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row">
+                    <p>^^</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5">
+        <label for="insertinput" class="fs-3">Input</label>
+        <textarea id="insertinput" placeholder="Please Input" required="required" cols="120" rows="30" maxlength="4000" class="fs-5" style="width: 100%;resize: none"></textarea>
+    </div>
+    <div class="mt-3">
+        <button type="button" class="btn btn-info btn-lg" v-on:click="this.insertText();console.log('Click!');">
+            Enter
+        </button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="../oldType/assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../oldType/assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="../oldType/assets/js/vue.global.js" type="text/javascript"></script>
+<script src="../oldType/assets/js/axios-0.18.0.js" type="text/javascript"></script>
+<script src="../oldType/assets/js/PrivateJs/MainPage.js" type="text/javascript"></script>
+</body>
+</html>
